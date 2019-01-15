@@ -12,7 +12,6 @@ public class Movie {
     }
 
     public Actor getActor() {
-        //System.out.println("Inside Movie getActor");
         return actor;
     }
 

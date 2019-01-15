@@ -5,13 +5,14 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-
+    <!--Used property based injection-->
     <bean id="actor" class="com.stackroute.domain.Actor">
             <property name="name" value="DQ"></property>
             <property name="gender" value="male"></property>
             <property name="age" value="33"></property>
     </bean>
 
+    <!--Used Constructor based injection-->
     <bean id="actorA" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="Sharukh"></constructor-arg>
         <constructor-arg name="gender" value="male"></constructor-arg>
@@ -30,6 +31,7 @@
         <constructor-arg index="2" value="37"></constructor-arg>
     </bean>
 
+    <!--Bean with name having two values-->
     <bean name="movieA,movieC" class="com.stackroute.domain.Movie" scope="prototype">
         <property name="actor" ref="actor"></property>
     </bean>
