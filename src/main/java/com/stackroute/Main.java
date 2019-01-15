@@ -1,5 +1,6 @@
 package com.stackroute;
 
+import com.stackroute.demo.BeanLifecycleDemoBean;
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.factory.BeanFactory;
@@ -21,6 +22,13 @@ public class Main {
         Actor actor3 = movie3.getActor();
         System.out.println(actor3.getName() + " " + actor3.getGender()+ " " + actor3.getAge());
 
-
+        ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
+        BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean)context1.getBean("beanlifecycledemo");
+        try {
+            beanLifecycleDemoBean.afterPropertiesSet();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        ((ClassPathXmlApplicationContext) context).close();
     }
 }

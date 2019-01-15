@@ -35,4 +35,5 @@
         <!--<constructor-arg name="actor" ref="actorA"></constructor-arg>-->
     </bean>
 
+    <bean id="beanlifecycledemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
     </beans>
