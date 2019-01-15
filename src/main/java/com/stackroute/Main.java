@@ -16,12 +16,13 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println();
+        //Used ApplicationContext for movieB
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie3 = (Movie)context.getBean("movieB");
         Actor actor3 = movie3.getActor();
         System.out.println(actor3.getName() + " " + actor3.getGender()+ " " + actor3.getAge());
 
+        //Created Another ApplicationContext with beanlifecycledemo and called afterPropertiesSet method inside try-catch block
         ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
         BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean)context1.getBean("beanlifecycledemo");
         try {
@@ -29,6 +30,8 @@ public class Main {
         }catch (Exception e){
             System.out.println(e);
         }
+
+        //Call to destroy
         ((ClassPathXmlApplicationContext) context).close();
     }
 }

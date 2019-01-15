@@ -30,10 +30,10 @@
         <constructor-arg index="2" value="37"></constructor-arg>
     </bean>
 
-
+    <!--Used autowire-->
     <bean id="movieB" class="com.stackroute.domain.Movie" autowire="byName">
         <!--<constructor-arg name="actor" ref="actorA"></constructor-arg>-->
     </bean>
-
+    <!--Bean for beanlifecycledemo with init-metho and destroy-method-->
     <bean id="beanlifecycledemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
     </beans>
