@@ -33,7 +33,7 @@
     <bean name="movieA,movieC" class="com.stackroute.domain.Movie" scope="prototype">
         <property name="actor" ref="actor"></property>
     </bean>
-
+    <!--Used autowire-->
     <bean id="movieB" class="com.stackroute.domain.Movie" autowire="byName">
         <!--<constructor-arg name="actor" ref="actorA"></constructor-arg>-->
     </bean>
