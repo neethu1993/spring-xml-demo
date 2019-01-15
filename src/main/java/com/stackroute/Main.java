@@ -22,6 +22,7 @@ public class Main {
         Actor actor3 = movie3.getActor();
         System.out.println(actor3.getName() + " " + actor3.getGender()+ " " + actor3.getAge());
 
+        //ApplicationContext object with beanlifecycledemo
         ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
         BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean)context1.getBean("beanlifecycledemo");
         try {

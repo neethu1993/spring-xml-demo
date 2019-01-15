@@ -35,6 +35,9 @@
         <!--<constructor-arg name="actor" ref="actorA"></constructor-arg>-->
     </bean>
 
+    <!--Bean with beanlifecycledemo with Init-method and destroy-method-->
     <bean id="beanlifecycledemo" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
-    <bean id="beanLifecycleDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
+
+    <!--Bean with beanPostProcessorDemoBean-->
+    <bean id="beanPostProcessorDemoBean" class="com.stackroute.demo.BeanPostProcessorDemoBean"></bean>
     </beans>

@@ -2,6 +2,7 @@ package com.stackroute.demo;
 
 import org.springframework.beans.factory.InitializingBean;
 
+/*BeanLifecycleDemoBean implements InitializingBean with afterPropertiesSet method, customInit method and  customDestroy method*/
 public class BeanLifecycleDemoBean implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         System.out.println("Inside afterPropertiesSet");
