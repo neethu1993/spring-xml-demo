@@ -15,28 +15,12 @@ import org.springframework.core.io.ClassPathResource;
 public class Main {
     public static void main(String[] args) {
 
-//        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("beans.xml"));
-//        Movie movie1 = (Movie)beanFactory.getBean("movieA");
-//        Actor actor1 = movie1.getActor();
-//        System.out.println(actor1.getName() + " " + actor1.getGender()+ " " + actor1.getAge());
-//
-//        System.out.println();
-//        BeanDefinitionRegistry beanDefinitionRegistry=new DefaultListableBeanFactory();
-//        BeanDefinitionReader beanDefinitionReader=new XmlBeanDefinitionReader(beanDefinitionRegistry);
-//        beanDefinitionReader.loadBeanDefinitions(new ClassPathResource("beans.xml"));
-//        Movie movie2 = ((DefaultListableBeanFactory) beanDefinitionRegistry).getBean(Movie.class);
-//        Actor actor2 = movie2.getActor();
-//        System.out.println(actor2.getName() + " " + actor2.getGender()+ " " + actor2.getAge());
-
         System.out.println();
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie3 = (Movie)context.getBean("movieB");
         Actor actor3 = movie3.getActor();
         System.out.println(actor3.getName() + " " + actor3.getGender()+ " " + actor3.getAge());
 
-        Movie movie4 = (Movie)context.getBean("movieD");
-        Actor actor4 = movie4.getActor();
-        System.out.println(actor4.getName() + " " + actor4.getGender()+ " " + actor4.getAge());
 
     }
 }
