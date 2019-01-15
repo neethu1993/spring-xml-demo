@@ -30,15 +30,13 @@ public class Main {
 
         System.out.println();
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        Movie movie3 = (Movie)context.getBean("movieA");
+        Movie movie3 = (Movie)context.getBean("movieB");
         Actor actor3 = movie3.getActor();
         System.out.println(actor3.getName() + " " + actor3.getGender()+ " " + actor3.getAge());
 
-        Movie movie4 = (Movie)context.getBean("movieC");
+        Movie movie4 = (Movie)context.getBean("movieD");
         Actor actor4 = movie4.getActor();
         System.out.println(actor4.getName() + " " + actor4.getGender()+ " " + actor4.getAge());
-
-        System.out.println(movie3==movie4);
 
     }
 }
