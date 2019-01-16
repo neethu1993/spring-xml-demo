@@ -34,7 +34,7 @@ public class Main {
 
         //ApplicationContext object with beanlifecycledemo
         ApplicationContext context1 = new ClassPathXmlApplicationContext("beans.xml");
-        BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean)context1.getBean("beanlifecycledemo");
+        BeanLifecycleDemoBean beanLifecycleDemoBean = (BeanLifecycleDemoBean)context1.getBean("beanLifeCycleDemo");
         try {
             beanLifecycleDemoBean.afterPropertiesSet();
         }catch (Exception e){
